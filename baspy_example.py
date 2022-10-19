@@ -26,20 +26,20 @@ for index, row in df.iterrows():
     
     elif df.iloc[i,3] != df.iloc[i-1,3]:
 
-    # Only one realisation per model is read in!
+        # Only one realisation per model is read in!
 
-    myfile = bp.open_dataset(row, use_cftime = 'True') # xarray
-    #myfile = bp.get_cube(row) # iris
+        myfile = bp.open_dataset(row, use_cftime = 'True') # xarray
+        #myfile = bp.get_cube(row) # iris
 
-    #print(myfile)
+        #print(myfile)
 
-    # Read in Variables
-    tas = myfile.tas 
-    lat = myfile.lat
-    lon = myfile.lon
-    time = myfile.time
+        # Read in Variables
+        tas = myfile.tas 
+        lat = myfile.lat
+        lon = myfile.lon
+        time = myfile.time
 
-    tas = tas.sel(time=slice("1940-01", "1969-12")) # Index time dimension
+        tas = tas.sel(time=slice("1940-01", "1969-12")) # Index time dimension
 
     
 
