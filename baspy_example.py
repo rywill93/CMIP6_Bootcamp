@@ -23,7 +23,7 @@ elif df.iloc[i,3] != df.iloc[i-1,3]:
 
     # Only one realisation per model is read in!
 
-    myfile = bp.open_dataset(row, use_cftime = 'True') # xarray
+    myfile = bp.open_dataset(row) # xarray
     #myfile = bp.get_cube(row) # iris
 
     #print(myfile)
